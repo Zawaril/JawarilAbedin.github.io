@@ -115,6 +115,12 @@ a:hover{opacity:.85; text-decoration:underline}
   border:1px solid var(--border);
   background:rgba(255,255,255,.03);
 }
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 .actions{margin:10px 0 0; font-size:13px; color:var(--muted)}
 .footer{padding:26px 0 40px; color:var(--muted); font-size:13px; text-align:center}

@@ -1,62 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jawaril Munshad Abedin's Personal Webpage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-    section {
-      margin: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jawaril Munshad Abedin</title>
+  <meta name="description" content="Jawaril Munshad Abedin — Data Science, ML, and Applied Research." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
-<body>
 
-  <header>
-    <h1>Welcome to My Personal Webpage</h1>
-    <p>Hi, I'm Jawaril Munshad Abedin, a researcher and educator in the field of AI and Neuroscience.</p>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">JA</div>
+        <div>
+          <h1>Jawaril Munshad Abedin</h1>
+          <p class="subtitle">Data Science • Machine Learning • Applied Research</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact" class="pill">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am currently working as a full-time lecturer at BRAC University in the Department of Computer Science and Engineering. My research interests include machine learning, computational neuroscience, and artificial intelligence.</p>
-  </section>
+  <main id="main" class="container">
+    <section class="hero">
+      <div>
+        <h2>Hi — I’m Jawaril.</h2>
+        <p>
+          I work on machine learning systems and data-driven research, with interests in
+          biomedical/health data, time-series, and reproducible ML pipelines.
+        </p>
 
-  <section>
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Neural Networks and Deep Learning</li>
-      <li>Computational Neuroscience</li>
-      <li>Cognitive AI</li>
-    </ul>
-  </section>
+        <div class="cta">
+          <a class="button" href="#projects">See projects</a>
+          <a class="button ghost" href="assets/CV.pdf">Download CV</a>
+        </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Feel free to reach out to me through <a href="mailto:jawaril.munshad.abedin@gmail.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/jawaril/" target="_blank">LinkedIn</a>.</p>
-  </section>
+        <div class="links">
+          <a href="https://github.com/jawarilabedin" target="_blank" rel="noreferrer">GitHub</a>
+          <span class="dot">•</span>
+          <a href="https://www.linkedin.com/in/jawaril/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <span class="dot">•</span>
+          <a href="mailto:jawaril.munshad.abedin@gmail.com">jawaril.munshad.abedin@gmail.com</a>
+        </div>
+      </div>
 
-  <footer>
-    <p>&copy; 2024 Jawaril Munshad Abedin</p>
-  </footer>
+      <div class="card highlight">
+        <h3>Currently</h3>
+        <ul>
+          <li>MSc (Data Science), Norway</li>
+          <li>Building ML pipelines for biomedical data</li>
+          <li>Open to summer internships & research roles</li>
+        </ul>
+        <div class="mini">
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+    </section>
 
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="grid two">
+        <div class="card">
+          <p>
+            I’m a data scientist with a background in computer science and a focus on applied ML.
+            I care about clear methodology, validation against expert workflows, and producing
+            datasets that are reproducible and useful downstream.
+          </p>
+          <p class="muted">
+            Replace this with your exact bio (1–2 short paragraphs is perfect).
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <ul class="clean">
+            <li><strong>ML:</strong> deep learning, time-series, evaluation, explainability</li>
+            <li><strong>Engineering:</strong> packaging, CI, reproducible pipelines</li>
+            <li><strong>Tools:</strong> Python, R, SQL, Git/GitLab, VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <h2>Research interests</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Biomedical ML</h3>
+          <p>Segmentation, classification, and robust validation workflows for clinical data.</p>
+        </div>
+        <div class="card">
+          <h3>Time-series & Forecasting</h3>
+          <p>Modeling temporal dynamics with interpretable baselines and modern ML.</p>
+        </div>
+        <div class="card">
+          <h3>Reproducible Pipelines</h3>
+          <p>Standardized steps, careful QC, and alignment with domain expert “ground truth”.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>Automated Cytometry Gating</h3>
+          <p>
+            Pipeline that mimics expert gating steps and produces reproducible outputs for analysis.
+          </p>
+          <div class="row">
+            <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Pipeline</span>
+          </div>
+          <p class="actions">
+            <a href="#" target="_blank" rel="noreferrer">Repo</a>
+            <span class="dot">•</span>
+            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Oil Spill Simulation</h3>
+          <p>
+            Finite-volume solver and analysis workflow for environmental simulation coursework.
+          </p>
+          <div class="row">
+            <span class="tag">Python</span><span class="tag">Numerics</span><span class="tag">Modeling</span>
+          </div>
+          <p class="actions">
+            <a href="#" target="_blank" rel="noreferrer">Repo</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Time-series Assignments</h3>
+          <p>
+            Forecasting + decomposition + diagnostics across multiple datasets.
+          </p>
+          <div class="row">
+            <span class="tag">R</span><span class="tag">Forecasting</span><span class="tag">Stats</span>
+          </div>
+          <p class="actions">
+            <a href="#" target="_blank" rel="noreferrer">Portfolio</a>
+          </p>
+        </article>
+      </div>
+      <p class="muted small">Tip: add 3–6 projects max. Link to GitHub + a short PDF or README screenshot.</p>
+    </section>
+
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+      <div class="card">
+        <ul class="clean">
+          <li>
+            <strong>Paper title</strong> — Journal/Conference, Year.
+            <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            <span class="dot">•</span>
+            <a href="#" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li class="muted">Add your Q1 journal publication here (title + venue + year + links).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching" class="section">
+      <h2>Teaching</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Course experience</h3>
+          <ul class="clean">
+            <li>Data Structures</li>
+            <li>Artificial Intelligence (theory + lab)</li>
+            <li>System Analysis & Design (lab coordination)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mentoring</h3>
+          <p>Supervision/co-supervision of student projects in NLP, medical imaging, and ML systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>
+          Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br />
+          GitHub: <a href="https://github.com/jawarilabedin" target="_blank" rel="noreferrer">github.com/jawarilabedin</a>
+        </p>
+        <p class="muted small">
+          Replace the email + LinkedIn link in the header and hero section.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Jawaril Munshad Abedin • Built with GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

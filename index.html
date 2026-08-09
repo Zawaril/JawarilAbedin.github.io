@@ -1,222 +1,709 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jawaril Munshad Abedin — Data Science, Machine Learning, AI, research and teaching." />
   <title>Jawaril Munshad Abedin</title>
-  <img src="profile.jpg" alt="Jawaril Munshad Abedin" class="profile-picture">
-  <meta name="description" content="Jawaril Munshad Abedin — Data Science, ML, and Applied Research." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" />
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="container">
-      <div class="brand">
-        <div class="avatar" aria-hidden="true">JA</div>
-        <div>
-          <h1>Jawaril Munshad Abedin</h1>
-          <p class="subtitle">Data Science • Machine Learning • Applied Research</p>
-        </div>
-      </div>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Jawaril Munshad Abedin</a>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact" class="pill">Contact</a>
+        <a href="#research">Research</a>
+        <a href="#awards">Awards</a>
+        <a href="#leadership">Leadership</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="hero">
+  <main id="main">
+
+   <!-- HERO -->
+    <section class="hero" id="top">
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+
+      <p class="kicker">
+        DATA SCIENCE · MACHINE LEARNING · AI
+      </p>
+
+      <h1>
+        Building data-driven systems for real-world problems.
+      </h1>
+
+      <p class="hero-intro">
+        I’m <strong>Jawaril Munshad Abedin</strong>, a Master’s student in
+        Data Science at NMBU in Norway, with a background in computer science,
+        machine learning research, software development and teaching.
+      </p>
+
+      <p class="hero-intro">
+        My work spans machine learning, optimization, statistical modelling,
+        software development and reproducible data pipelines.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">
+          View selected work
+        </a>
+
+        <a
+          class="button secondary"
+          href="assets/CV.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Download CV
+        </a>
+      </div>
+
+      <div class="social-links" aria-label="Professional links">
+
+        <a
+          href="https://github.com/Zawaril"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+
+        <span>·</span>
+
+        <a
+          href="https://www.linkedin.com/in/jawaril/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <span>·</span>
+
+        <a
+          href="https://scholar.google.com/citations?user=EaNBod8AAAAJ&hl=en"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Scholar
+        </a>
+
+        <span>·</span>
+
+        <a href="mailto:jawaril.munshad.abedin@gmail.com">
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="portrait-frame">
+        <img
+          class="profile-picture"
+          src="assets/profile.jpg"
+          alt="Portrait of Jawaril Munshad Abedin"
+        />
+      </div>
+
+      <div class="status-card">
+
+        <span class="status-dot" aria-hidden="true"></span>
+
+        <div>
+          <strong>Currently</strong>
+
+          <p>
+            MSc Data Science · Teaching Assistant · Applied ML Research
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+  <div class="container split-section">
+
+    <div>
+      <p class="section-label">ABOUT</p>
+      <h2>From data to reliable solutions.</h2>
+    </div>
+
+    <div class="about-copy">
+
+      <p>
+        I work at the intersection of artificial intelligence, machine learning,
+        data engineering, and quantitative analysis. I enjoy turning complex,
+        messy, or high-dimensional data into reliable models, reproducible
+        workflows, and practical solutions.
+      </p>
+
+      <p>
+        My experience spans biomedical data analysis, optimization, software
+        engineering, and statistical modelling. I am currently working on
+        automated flow cytometry analysis, where I build end-to-end data
+        pipelines and machine learning workflows. Previously, I developed
+        recurrent-neural-network-based optimization methods for combinatorial
+        problems, which resulted in a peer-reviewed journal publication.
+      </p>
+
+      <p>
+        Alongside technical work, I have several years of teaching and mentoring
+        experience in computer science and AI. This has strengthened my ability
+        to communicate complex ideas clearly, collaborate across disciplines,
+        and approach problems from both technical and practical perspectives.
+      </p>
+
+      <p>
+        I am interested in opportunities where data, AI, and software can be
+        used to solve meaningful real-world problems, whether through research,
+        product development, or applied engineering.
+      </p>
+
+      <div class="skill-groups">
+
+        <div>
+          <span class="skill-heading">Programming</span>
+          <p>Python · R · SQL</p>
+        </div>
+
+        <div>
+          <span class="skill-heading">ML & Data</span>
+          <p>
+            PyTorch · Scikit-learn · Pandas · NumPy · Statistical modelling
+          </p>
+        </div>
+
+        <div>
+          <span class="skill-heading">Workflow</span>
+          <p>
+            Git · Jupyter · Data pipelines · Validation · Visualization
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- EXPERIENCE -->
+     <section class="section section-tint" id="experience">
+  <div class="container">
+
+    <div class="section-heading">
       <div>
-        <h2>Hi — I’m Jawaril.</h2>
-        <p>
-          I work on machine learning systems and data-driven research, with interests in
-          biomedical/health data, time-series, and reproducible ML pipelines.
-        </p>
+        <p class="section-label">EXPERIENCE</p>
+        <h2>Experience across data, research and teaching.</h2>
+      </div>
+    </div>
 
-        <div class="cta">
-          <a class="button" href="#projects">See projects</a>
-          <a class="button ghost" href="assets/CV.pdf">Download CV</a>
+    <div class="timeline">
+
+      <article class="timeline-item">
+        <div class="timeline-date">Jun 2026 — Present</div>
+
+        <div>
+          <h3>Teaching Assistant</h3>
+          <p class="meta">
+            Norwegian University of Life Sciences (NMBU)
+          </p>
+
+          <p>
+            Support undergraduate and graduate teaching through practical
+            exercises, technical guidance, and student mentoring.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="timeline-item">
+        <div class="timeline-date">Jun 2023 — Aug 2025</div>
+
+        <div>
+          <h3>Lecturer, Computer Science & Engineering</h3>
+
+          <p class="meta">
+            Brac University
+          </p>
+
+          <p>
+            Taught Artificial Intelligence, Machine Learning, Data Structures
+            and other core computer science courses, while mentoring student
+            projects and developing course materials, assignments and examinations.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <p class="section-label">EDUCATION</p>
+        <h2>Academic background.</h2>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <article class="timeline-item">
+        <div class="timeline-date">2025 — 2027</div>
+
+        <div>
+          <h3>MSc Data Science</h3>
+
+          <p class="meta">
+            Norwegian University of Life Sciences (NMBU), Norway
+          </p>
+
+          <p>
+            Graduate study in machine learning, statistical modelling,
+            time series, data science, and scientific computing.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="timeline-item">
+        <div class="timeline-date">2018 — 2022</div>
+
+        <div>
+          <h3>BSc Computer Science & Engineering</h3>
+
+          <p class="meta">
+            Brac University · CGPA 3.99/4.00 · Top 1%
+          </p>
+
+          <p>
+            Graduated Summa Cum Laude with a strong foundation in
+            computer science, artificial intelligence, algorithms,
+            software engineering, and mathematics.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-tint" id="skills">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <p class="section-label">SKILLS</p>
+        <h2>Technical toolkit.</h2>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>Python · SQL · R</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Data & Machine Learning</h3>
+        <p>
+          Pandas · NumPy · Scikit-learn · PyTorch ·
+          Statistical Modelling · Machine Learning
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Software & Data</h3>
+        <p>
+          Git · Pytest · Data Pipelines · Data Validation ·
+          Jupyter · Scientific Computing
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">SELECTED WORK</p>
+            <h2>Projects</h2>
+          </div>
+          <p class="section-note">
+            Each project has a short case-study page with the problem, approach, tools and results.
+          </p>
         </div>
 
-        <div class="links">
-          <a href="https://github.com/jawarilabedin" target="_blank" rel="noreferrer">GitHub</a>
-          <span class="dot">•</span>
-          <a href="https://www.linkedin.com/in/jawaril/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <span class="dot">•</span>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <a class="project-media" href="projects/cytometry.html">
+  <img
+    src="assets/projects/cytometry-overview.png"
+    alt="Automated flow cytometry gating visualization"
+  />
+</a>
+
+            <div class="project-body">
+              <p class="project-category">BIOMEDICAL MACHINE LEARNING</p>
+              <h3><a href="projects/cytometry.html">Automated Cytometry Gating</a></h3>
+              <p>
+               Ongoing machine learning project focused on building a reproducible data pipeline for automated flow cytometry analysis, visualization, and comparison with expert-guided workflows.
+              </p>
+
+              <div class="tags">
+                <span>Python</span><span>Machine Learning</span><span>Biomedical Data</span>
+              </div>
+
+              <a class="text-link" href="projects/cytometry.html">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a class="project-media" href="projects/rnn-vca.html">
+              <img src="assets/projects/rnn-architecture.png" alt="Vanilla and Dilated RNN architectures" />
+            </a>
+
+            <div class="project-body">
+              <p class="project-category">ML · OPTIMIZATION</p>
+              <h3><a href="projects/rnn-vca.html">Variational Classical Annealing with RNNs</a></h3>
+              <p>
+                Recurrent-neural-network-based optimization evaluated on Max-Cut, Nurse Scheduling
+                and Traveling Salesman Problem instances.
+              </p>
+
+              <div class="tags">
+                <span>RNN</span><span>Deep Learning</span><span>Optimization</span>
+              </div>
+
+              <div class="project-links">
+                <a class="text-link" href="projects/rnn-vca.html">View case study →</a>
+                <a class="text-link subtle" href="https://doi.org/10.1088/2632-2153/acb895" target="_blank" rel="noreferrer">Paper ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+
+  <a class="project-media" href="projects/oil-spill.html">
+    <img
+      src="assets/projects/oil-spill.png"
+      alt="Oil spill finite-volume simulation on an unstructured triangular mesh"
+    />
+  </a>
+
+  <div class="project-body">
+
+    <p class="project-category">
+      SCIENTIFIC COMPUTING · SOFTWARE ENGINEERING
+    </p>
+
+    <h3>
+      <a href="projects/oil-spill.html">
+        From Spill to Shore: Oil Transport Simulation
+      </a>
+    </h3>
+
+    <p>
+      Developed a two-dimensional oil spill simulator using a finite-volume
+      method on an unstructured triangular mesh with an explicit upwind scheme.
+    </p>
+
+    <div class="tags">
+      <span>Python</span>
+      <span>Numerical Methods</span>
+      <span>Finite Volume</span>
+      <span>Pytest</span>
+      <span>Git</span>
+    </div>
+
+    <a class="text-link" href="projects/oil-spill.html">
+      View case study →
+    </a>
+
+  </div>
+
+</article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH / PUBLICATION -->
+    <section class="section section-tint" id="research">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">RESEARCH</p>
+<h2>Research & Publications</h2>
+          </div>
+        </div>
+
+        <article class="publication-card">
+          <div class="publication-content">
+            <p class="publication-type">PEER-REVIEWED JOURNAL ARTICLE · 2023</p>
+            <h3>Supplementing recurrent neural networks with annealing to solve combinatorial optimization problems</h3>
+            <p class="meta">Shoummo Ahsan Khandoker · <strong>Jawaril Munshad Abedin</strong> · Mohamed Hibat-Allah</p>
+            <p><em>Machine Learning: Science and Technology</em>, Volume 4, 015026.</p>
+
+            <div class="publication-actions">
+
+  <a
+    class="button primary small-button"
+    href="https://doi.org/10.1088/2632-2153/acb895"
+    target="_blank"
+    rel="noreferrer"
+  >
+    DOI
+  </a>
+
+  <a
+    class="button secondary small-button"
+    href="assets/publications/rnn-vca-paper.pdf"
+    target="_blank"
+    rel="noreferrer"
+  >
+    PDF
+  </a>
+
+  <a
+    class="button secondary small-button"
+    href="https://github.com/RNN-VCA-CO/RNN-VCA-CO"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Code
+  </a>
+
+  <a
+    class="button secondary small-button"
+    href="https://orcid.org/0009-0006-0499-2248"
+    target="_blank"
+    rel="noreferrer"
+  >
+    ORCID
+  </a>
+
+</div>
+          </div>
+
+          <a class="publication-figure" href="projects/rnn-vca.html">
+            <img src="assets/projects/maxcut-results.png" alt="Max-Cut results comparing variational classical annealing and simulated annealing" />
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">RECOGNITION</p>
+            <h2>Awards & achievements</h2>
+          </div>
+        </div>
+
+        <div class="award-grid">
+          <article class="award-card award-text-only">
+            <p class="award-year">2025 — 2027</p>
+            <h3>NORSTIP Scholarship</h3>
+            <p>Fully funded scholarship for Master’s study at NMBU, covering tuition, living and travel support.</p>
+            <a class="text-link" href="https://www.nmbu.no/en/studies/norstip-scholarship-scheme" target="_blank" rel="noreferrer">About the scholarship ↗</a>
+          </article>
+
+          <article class="award-card">
+            <img src="assets/awards/merwin.png" alt="Richard E. Merwin Student Scholarship certificate" />
+            <div class="award-body">
+              <p class="award-year">Fall 2020</p>
+              <h3>Richard E. Merwin Student Scholarship</h3>
+              <p>IEEE Computer Society recognition for academic achievement, leadership and student chapter involvement.</p>
+              <div class="inline-links">
+                <a href="assets/certificates/richard-merwin.pdf" target="_blank" rel="noreferrer">Certificate</a>
+                <a href="https://www.computer.org/volunteering/awards/scholarships/merwin/merwin-winners#fall-2020" target="_blank" rel="noreferrer">Official list</a>
+                <a href="https://ieeebracu.com/jawaril-munshad-abedin-wins-the-prestigious-richard-e-merwin-student-scholarship-offered-by-ieee-computer-society/" target="_blank" rel="noreferrer">Feature</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <img src="assets/awards/quality-journal.jpeg" alt="Receiving the Quality Journal Publication Award" />
+            <div class="award-body">
+              <p class="award-year">2024</p>
+              <h3>Quality Journal Publication Award</h3>
+              <p>Brac University award for research published in a Q1 journal.</p>
+              <div class="inline-links">
+                <a href="assets/certificates/quality-journal-award.pdf" target="_blank" rel="noreferrer">Certificate</a>
+                <a href="https://doi.org/10.1088/2632-2153/acb895" target="_blank" rel="noreferrer">Publication</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="award-card">
+  <img
+    class="summa-image"
+    src="assets/awards/summa-cum-laude.jpeg"
+    alt="Jawaril Munshad Abedin at Brac University Convocation"
+  />
+
+  <div class="award-body">
+    <p class="award-year">Undergraduate</p>
+    <h3>Summa Cum Laude</h3>
+    <p>
+      Highest distinction, BSc in Computer Science & Engineering,
+      CGPA 3.99/4.00 (Top 1%).
+    </p>
+  </div>
+</article>
+
+
+          <article class="award-card award-text-only">
+            <p class="award-year">2019 — 2021</p>
+            <h3>Merit-Based Scholarship</h3>
+            <p>75% tuition fee waiver based on academic performance at Brac University.</p>
+          </article>
+
+          <article class="award-card">
+            <img src="assets/awards/best-ambassador.png" alt="Best Ambassador Award certificate" />
+            <div class="award-body">
+              <p class="award-year">2020</p>
+              <h3>Best Ambassador Award</h3>
+              <p>IEEE Computer Society Bangladesh Chapter Winter Symposium.</p>
+              <a class="text-link" href="assets/certificates/best-ambassador.pdf" target="_blank" rel="noreferrer">Certificate ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <details class="more-awards">
+          <summary>More awards & competition results</summary>
+          <div class="compact-grid">
+            <div>
+              <h3>Dorchestra Winner</h3>
+              <p>IEEE PES BRACU Student Branch Chapter · 2020</p>
+              <a href="assets/certificates/dorchestra-winner.pdf" target="_blank" rel="noreferrer">View certificate ↗</a>
+            </div>
+            <div>
+              <h3>WEAVE Problem Solving Contest — Runner-Up</h3>
+              <p>IEEE BUP WIE · 2020</p>
+              <a href="assets/certificates/weave-runner-up.pdf" target="_blank" rel="noreferrer">View certificate ↗</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="section section-tint" id="leadership">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">COMMUNITY</p>
+            <h2>Leadership & volunteering</h2>
+          </div>
+        </div>
+
+        <div class="leadership-list">
+          <article>
+            <span class="leadership-date">2025</span>
+            <div>
+              <h3>Faculty Co-advisor · BRAC University Computer Club</h3>
+              <p>Mentored undergraduate students and supported technical and problem-solving activities.</p>
+            </div>
+          </article>
+
+          <article>
+            <span class="leadership-date">2021 — Present</span>
+            <div>
+              <h3>Richard E. Merwin Mentor & Student Ambassador · IEEE Computer Society</h3>
+              <p>Mentoring, outreach and community engagement within the IEEE Computer Society ecosystem.</p>
+            </div>
+          </article>
+
+          <article>
+            <span class="leadership-date">2020</span>
+            <div>
+              <h3>Vice Chair · IEEE Computer Society BRACU Student Branch Chapter</h3>
+              <p>Supported technical activities, chapter initiatives and student engagement.</p>
+              <a class="text-link" href="assets/certificates/ieee-vice-chair.pdf" target="_blank" rel="noreferrer">Certificate ↗</a>
+            </div>
+          </article>
+
+          <article>
+            <span class="leadership-date">2018 — 2019</span>
+            <div>
+              <h3>Senior Executive · Robotics Club of BRAC University</h3>
+              <p>Contributed to student-led technology activities and club initiatives.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-footnote">
+          More volunteering experience is available on
+          <a href="https://www.linkedin.com/in/jawaril/details/volunteering-experiences/" target="_blank" rel="noreferrer">LinkedIn ↗</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <p class="section-label">CONTACT</p>
+          <h2>Let’s connect.</h2>
+          <p>
+  I’m interested in challenging problems across data science,
+  machine learning, AI, software and data engineering,
+  and applied research.
+</p>
+        </div>
+
+        <div class="contact-links">
           <a href="mailto:jawaril.munshad.abedin@gmail.com">jawaril.munshad.abedin@gmail.com</a>
-        </div>
-      </div>
-
-      <div class="card highlight">
-        <h3>Currently</h3>
-        <ul>
-          <li>MSc (Data Science), Norway</li>
-          <li>Building ML pipelines for biomedical data</li>
-          <li>Open to summer internships & research roles</li>
-        </ul>
-        <div class="mini">
-          <span class="tag">Python</span>
-          <span class="tag">R</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Git</span>
+          <a href="https://github.com/Zawaril" target="_blank" rel="noreferrer">github.com/Zawaril ↗</a>
+          <a href="https://www.linkedin.com/in/jawaril/" target="_blank" rel="noreferrer">linkedin.com/in/jawaril ↗</a>
         </div>
       </div>
     </section>
-
-    <section id="about" class="section">
-      <h2>About</h2>
-      <div class="grid two">
-        <div class="card">
-          <p>
-            I’m a data scientist with a background in computer science and a focus on applied ML.
-            I care about clear methodology, validation against expert workflows, and producing
-            datasets that are reproducible and useful downstream.
-          </p>
-          <p class="muted">
-            Replace this with your exact bio (1–2 short paragraphs is perfect).
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Skills</h3>
-          <ul class="clean">
-            <li><strong>ML:</strong> deep learning, time-series, evaluation, explainability</li>
-            <li><strong>Engineering:</strong> packaging, CI, reproducible pipelines</li>
-            <li><strong>Tools:</strong> Python, R, SQL, Git/GitLab, VS Code</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="research" class="section">
-      <h2>Research interests</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Biomedical ML</h3>
-          <p>Segmentation, classification, and robust validation workflows for clinical data.</p>
-        </div>
-        <div class="card">
-          <h3>Time-series & Forecasting</h3>
-          <p>Modeling temporal dynamics with interpretable baselines and modern ML.</p>
-        </div>
-        <div class="card">
-          <h3>Reproducible Pipelines</h3>
-          <p>Standardized steps, careful QC, and alignment with domain expert “ground truth”.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid three">
-        <article class="card">
-          <h3>Automated Cytometry Gating</h3>
-          <p>
-            Pipeline that mimics expert gating steps and produces reproducible outputs for analysis.
-          </p>
-          <div class="row">
-            <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Pipeline</span>
-          </div>
-          <p class="actions">
-            <a href="#" target="_blank" rel="noreferrer">Repo</a>
-            <span class="dot">•</span>
-            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Oil Spill Simulation</h3>
-          <p>
-            Finite-volume solver and analysis workflow for environmental simulation coursework.
-          </p>
-          <div class="row">
-            <span class="tag">Python</span><span class="tag">Numerics</span><span class="tag">Modeling</span>
-          </div>
-          <p class="actions">
-            <a href="#" target="_blank" rel="noreferrer">Repo</a>
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Time-series Assignments</h3>
-          <p>
-            Forecasting + decomposition + diagnostics across multiple datasets.
-          </p>
-          <div class="row">
-            <span class="tag">R</span><span class="tag">Forecasting</span><span class="tag">Stats</span>
-          </div>
-          <p class="actions">
-            <a href="#" target="_blank" rel="noreferrer">Portfolio</a>
-          </p>
-        </article>
-      </div>
-      <p class="muted small">Tip: add 3–6 projects max. Link to GitHub + a short PDF or README screenshot.</p>
-    </section>
-
-    <section id="publications" class="section">
-      <h2>Publications</h2>
-      <div class="card">
-        <ul class="clean">
-          <li>
-            <strong>Paper title</strong> — Journal/Conference, Year.
-            <a href="#" target="_blank" rel="noreferrer">PDF</a>
-            <span class="dot">•</span>
-            <a href="#" target="_blank" rel="noreferrer">DOI</a>
-          </li>
-          <li class="muted">Add your Q1 journal publication here (title + venue + year + links).</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="teaching" class="section">
-      <h2>Teaching</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>Course experience</h3>
-          <ul class="clean">
-            <li>Data Structures</li>
-            <li>Artificial Intelligence (theory + lab)</li>
-            <li>System Analysis & Design (lab coordination)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Mentoring</h3>
-          <p>Supervision/co-supervision of student projects in NLP, medical imaging, and ML systems.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>
-          Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br />
-          GitHub: <a href="https://github.com/jawarilabedin" target="_blank" rel="noreferrer">github.com/jawarilabedin</a>
-        </p>
-        <p class="muted small">
-          Replace the email + LinkedIn link in the header and hero section.
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>© <span id="y"></span> Jawaril Munshad Abedin • Built with GitHub Pages</p>
-    </footer>
   </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Jawaril Munshad Abedin</span>
+      <span>Built with HTML, CSS & GitHub Pages</span>
+    </div>
+  </footer>
+
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

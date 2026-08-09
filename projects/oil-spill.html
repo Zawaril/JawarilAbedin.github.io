@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../styles.css" />
+
+  <meta
+    name="description"
+    content="From Spill to Shore: Finite-Volume Simulation of Oil Transport — INF202 project by Jawaril Munshad Abedin"
+  />
+
+  <title>
+    Oil Transport Simulation — Jawaril Munshad Abedin
+  </title>
+</head>
+
+
+<body class="project-page">
+
+<header class="site-header">
+
+  <div class="container nav-wrap">
+
+    <a class="brand" href="../index.html">
+      Jawaril Munshad Abedin
+    </a>
+
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#research">Research</a>
+      <a class="nav-cta" href="../index.html#contact">Contact</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="project-detail-hero">
+
+  <div class="container">
+
+    <a class="back-link" href="../index.html#projects">
+      ← Back to projects
+    </a>
+
+    <p class="section-label">
+      SCIENTIFIC COMPUTING · NUMERICAL METHODS · SOFTWARE ENGINEERING
+    </p>
+
+    <h1>
+      From Spill to Shore:
+      Finite-Volume Simulation of Oil Transport
+    </h1>
+
+    <p class="project-detail-lead">
+      A two-dimensional numerical simulation of oil transport across a
+      coastal region using a finite-volume method on an unstructured
+      triangular mesh.
+    </p>
+
+    <div class="project-detail-meta">
+      <span>Python</span>
+      <span>Finite Volume Method</span>
+      <span>Numerical Simulation</span>
+      <span>Pytest</span>
+      <span>Git</span>
+      <span>GitLab</span>
+      <span>TOML</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="case-study">
+
+  <div class="container">
+
+
+    <!-- OVERVIEW -->
+
+    <div class="case-grid">
+
+      <h2>Overview</h2>
+
+      <div class="case-content">
+
+        <p>
+          This project was developed for INF202 Advanced Programming at
+          the Norwegian University of Life Sciences.
+        </p>
+
+        <p>
+          The objective was to simulate the transport of an oil spill
+          across a two-dimensional coastal region and evaluate whether
+          oil reaches a predefined fishing area.
+        </p>
+
+        <p>
+          The software combines numerical modelling with modular software
+          engineering practices, including configuration management,
+          automated testing, logging, visualisation, and version control.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PROBLEM -->
+
+    <div class="case-grid">
+
+      <h2>Problem</h2>
+
+      <div class="case-content">
+
+        <p>
+          A hypothetical oil spill occurs near Bay City and may affect
+          nearby fishing grounds.
+        </p>
+
+        <p>
+          The simulation models how oil concentration evolves over time
+          under a prescribed ocean velocity field and calculates how much
+          oil enters the protected fishing region.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- VISUAL -->
+
+    <div class="case-grid">
+
+      <h2>Simulation output</h2>
+
+      <div class="case-content">
+
+        <figure class="figure-card full">
+
+          <img
+            src="../assets/projects/oil-spill.png"
+            alt="Oil concentration on an unstructured triangular mesh"
+          />
+
+          <figcaption>
+            Final oil concentration on the triangular computational mesh.
+            The cyan region represents the fishing grounds.
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- NUMERICAL METHOD -->
+
+    <div class="case-grid">
+
+      <h2>Numerical method</h2>
+
+      <div class="case-content">
+
+        <p>
+          The physical domain is discretised using an
+          <strong>unstructured triangular mesh</strong>.
+          Each triangle acts as a finite control volume in which the
+          oil concentration is assumed to be spatially constant.
+        </p>
+
+        <p>
+          Oil transport is computed using a
+          <strong>finite-volume formulation</strong> with an
+          <strong>upwind numerical flux</strong>.
+        </p>
+
+        <p>
+          Time integration is performed with an explicit forward Euler
+          method.
+        </p>
+
+        <h3>Core numerical steps</h3>
+
+        <ol>
+          <li>Compute the velocity field at cell centres.</li>
+
+          <li>
+            Determine the average velocity across neighbouring
+            triangle interfaces.
+          </li>
+
+          <li>
+            Use the sign of the normal velocity component to determine
+            the upstream oil concentration.
+          </li>
+
+          <li>
+            Compute numerical flux across each edge.
+          </li>
+
+          <li>
+            Update cell-averaged oil concentration using explicit time
+            stepping.
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- INITIAL CONDITION -->
+
+    <div class="case-grid">
+
+      <h2>Model setup</h2>
+
+      <div class="case-content">
+
+        <p>
+          The initial oil distribution is represented using a Gaussian
+          concentration profile centred at a predefined location.
+        </p>
+
+        <p>
+          A time-independent two-dimensional velocity field transports
+          the oil through the domain.
+        </p>
+
+        <p>
+          Boundary elements are represented by non-oil-active line cells,
+          which provide the boundary treatment for the simulation.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- SOFTWARE ENGINEERING -->
+
+    <div class="case-grid">
+
+      <h2>Software design</h2>
+
+      <div class="case-content">
+
+        <p>
+          The simulation was implemented as a modular Python package with
+          separate responsibilities for mesh handling, numerical methods,
+          configuration, plotting, and utilities.
+        </p>
+
+        <ul>
+          <li>
+            <strong>mesh.py</strong> — mesh loading and neighbour construction
+          </li>
+
+          <li>
+            <strong>cells.py</strong> — cell geometry and oil storage
+          </li>
+
+          <li>
+            <strong>simulation.py</strong> — finite-volume time stepping
+            and flux calculations
+          </li>
+
+          <li>
+            <strong>velocity.py</strong> — prescribed flow field
+          </li>
+
+          <li>
+            <strong>plotting.py</strong> — visualisation, frames, and video
+          </li>
+
+          <li>
+            <strong>config.py</strong> — TOML configuration handling
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CONFIGURATION -->
+
+    <div class="case-grid">
+
+      <h2>Configuration</h2>
+
+      <div class="case-content">
+
+        <p>
+          Simulation parameters are stored in TOML configuration files
+          rather than hard-coded into the application.
+        </p>
+
+        <p>
+          This allows users to change the mesh, simulation duration,
+          time step, fishing-ground boundaries, and output settings
+          without modifying the source code.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- TESTING -->
+
+    <div class="case-grid">
+
+      <h2>Testing</h2>
+
+      <div class="case-content">
+
+        <p>
+          Automated tests were implemented with
+          <strong>pytest</strong> to verify key components of the system.
+        </p>
+
+        <ul>
+          <li>Triangle geometry calculations</li>
+          <li>Mesh neighbour relationships</li>
+          <li>Configuration parsing</li>
+          <li>Numerical flux calculations</li>
+          <li>Interactions between software components</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- RESULTS -->
+
+    <div class="case-grid">
+
+      <h2>Numerical results</h2>
+
+      <div class="case-content">
+
+        <p>
+          To examine numerical stability, the total simulation time was
+          kept fixed while the number of time steps was varied.
+        </p>
+
+        <div class="metrics-grid">
+
+          <div class="metric">
+            <strong>500</strong>
+            <span>Steps</span>
+          </div>
+
+          <div class="metric">
+            <strong>0.002</strong>
+            <span>Δt</span>
+          </div>
+
+          <div class="metric">
+            <strong>0.003030</strong>
+            <span>Final oil in fishing area</span>
+          </div>
+
+        </div>
+
+        <p>
+          A 200-step simulation produced a final oil value of 0.003025,
+          which was almost identical to the 500-step result.
+        </p>
+
+        <p>
+          This indicates temporal convergence for the smaller time-step
+          configurations.
+        </p>
+
+        <p>
+          Using only 50 time steps increased the final value to 0.005603,
+          indicating numerical artefacts caused by the larger time step.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- OUTPUTS -->
+
+    <div class="case-grid">
+
+      <h2>Outputs</h2>
+
+      <div class="case-content">
+
+        <p>
+          The program produces several forms of output:
+        </p>
+
+        <ul>
+          <li>
+            Logs tracking oil inside the fishing grounds over time
+          </li>
+
+          <li>
+            Final spatial visualisation of the oil distribution
+          </li>
+
+          <li>
+            Intermediate simulation frames
+          </li>
+
+          <li>
+            Optional animation showing oil transport through time
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- DEVELOPMENT -->
+
+    <div class="case-grid">
+
+      <h2>Development workflow</h2>
+
+      <div class="case-content">
+
+        <p>
+          The project followed an iterative development workflow using
+          Git and GitLab.
+        </p>
+
+        <p>
+          Tasks were managed using issues, milestones, and a GitLab issue
+          board, while regular commits and merging were used to integrate
+          features incrementally.
+        </p>
+
+        <p>
+          The project was developed progressively from a minimum viable
+          product that could load a mesh and visualise the initial oil
+          distribution, followed by numerical flux calculations,
+          time stepping, logging, testing, and animation.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- TAKEAWAYS -->
+
+    <div class="case-grid">
+
+      <h2>What this project demonstrates</h2>
+
+      <div class="case-content">
+
+        <ul>
+          <li>
+            Translating mathematical formulations into working software
+          </li>
+
+          <li>
+            Numerical simulation on irregular computational meshes
+          </li>
+
+          <li>
+            Modular and maintainable Python software design
+          </li>
+
+          <li>
+            Automated testing and numerical verification
+          </li>
+
+          <li>
+            Scientific visualisation
+          </li>
+
+          <li>
+            Collaborative development using Git and GitLab
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+</body>
+</html>

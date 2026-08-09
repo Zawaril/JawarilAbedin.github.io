@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <meta name="description" content="Variational Classical Annealing with RNNs project by Jawaril Munshad Abedin" />
+  <title>Variational Classical Annealing with RNNs — Jawaril Munshad Abedin</title>
+</head>
+<body class="project-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">Jawaril Munshad Abedin</a>
+      <nav class="nav">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#research">Research</a>
+        <a class="nav-cta" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-detail-hero">
+      <div class="container">
+        <a class="back-link" href="../index.html#projects">← Back to projects</a>
+        <p class="section-label">MACHINE LEARNING · OPTIMIZATION · PUBLISHED</p>
+        <h1>Variational Classical Annealing with RNNs</h1>
+        <p class="project-detail-lead">
+          Using autoregressive recurrent neural networks within a variational classical annealing framework
+          to solve combinatorial optimization problems and compare performance against simulated annealing.
+        </p>
+
+        <div class="project-detail-meta">
+          <span>Vanilla RNN</span>
+          <span>Dilated RNN</span>
+          <span>LSTM / GRU experiments</span>
+          <span>Max-Cut</span>
+          <span>Nurse Scheduling</span>
+          <span>TSP</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button primary" href="https://doi.org/10.1088/2632-2153/acb895" target="_blank" rel="noreferrer">Read paper</a>
+          <a class="button secondary" href="../assets/publications/rnn-vca-paper.pdf" target="_blank" rel="noreferrer">PDF</a>
+          <a class="button secondary" href="https://github.com/RNN-VCA-CO/RNN-VCA-CO" target="_blank" rel="noreferrer">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study">
+      <div class="container">
+        <div class="case-grid">
+          <h2>Research question</h2>
+          <div class="case-content">
+            <p>
+              Can autoregressive recurrent neural networks, combined with annealing, provide a useful
+              alternative to traditional simulated annealing for difficult combinatorial optimization tasks?
+            </p>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <h2>Approach</h2>
+          <div class="case-content">
+            <p>
+              The work uses the Variational Classical Annealing (VCA) framework. Recurrent neural networks
+              parameterize a probability distribution over candidate solutions and are optimized while the
+              temperature is gradually reduced.
+            </p>
+
+            <h3>Architectures</h3>
+            <p>
+              Experiments include Vanilla RNNs and Dilated RNNs. The Dilated architecture uses skip-like
+              recurrent connections to better represent longer-range interactions.
+            </p>
+
+            <div class="figure-grid">
+              <figure class="figure-card full">
+                <img src="../assets/projects/rnn-architecture.png" alt="Vanilla and Dilated RNN architectures used in the study" />
+                <figcaption>Vanilla RNN and Dilated RNN architectures used in the study.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <h2>Experiments</h2>
+          <div class="case-content">
+            <p>
+              VCA and simulated annealing were evaluated on three problem families:
+              Maximum Cut, Nurse Scheduling and the Traveling Salesman Problem.
+            </p>
+
+            <div class="figure-grid">
+              <figure class="figure-card">
+                <img src="../assets/projects/maxcut-results.png" alt="Max-Cut residual energy results" />
+                <figcaption>Max-Cut: residual energy across annealing schedules and graph densities.</figcaption>
+              </figure>
+
+              <figure class="figure-card">
+                <img src="../assets/projects/tsp-results.png" alt="Traveling Salesman Problem results" />
+                <figcaption>TSP: VCA and simulated-annealing performance across multiple system sizes.</figcaption>
+              </figure>
+
+              <figure class="figure-card full">
+                <img src="../assets/projects/nsp-tsp-results.png" alt="Nurse Scheduling and Traveling Salesman Problem result plots" />
+                <figcaption>Nurse Scheduling and TSP convergence results.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <h2>Key findings</h2>
+          <div class="case-content">
+            <ul>
+              <li>VCA achieved lower average error than simulated annealing in the slow-annealing regime across all three problems.</li>
+              <li>The study reached Traveling Salesman Problem instances with up to 256 cities.</li>
+              <li>For the best-case TSP solutions, VCA found the best tours across all three tested sizes and the exact ground state for N = 64.</li>
+              <li>VCA required more compute time per iteration than simulated annealing, leaving room for future work on efficiency and transfer/meta-learning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <h2>Publication</h2>
+          <div class="case-content">
+            <p>
+              <strong>Supplementing recurrent neural networks with annealing to solve combinatorial optimization problems</strong><br />
+              Shoummo Ahsan Khandoker, Jawaril Munshad Abedin, Mohamed Hibat-Allah<br />
+              <em>Machine Learning: Science and Technology</em>, 4 (2023) 015026.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

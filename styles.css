@@ -846,13 +846,7 @@ a:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 980px) {
-  .nav-wrap {
-    align-items: flex-start;
-    padding: 14px 0;
-    flex-direction: column;
-    gap: 8px;
-  }
+
 
   .nav {
     justify-content: flex-start;
@@ -862,7 +856,6 @@ a:hover {
     padding-top: 60px;
   }
 
-  .hero-grid,
   .split-section,
   .publication-card,
   .contact-card,
@@ -890,7 +883,170 @@ a:hover {
   }
 }
 
+/* METRICS */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.metric {
+  padding: 20px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.metric strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--accent-dark);
+}
+
+.metric span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.skill-card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.skill-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+
+/* AWARD IMAGES */
+.award-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.award-card .summa-image {
+  object-fit: contain;
+  object-position: center;
+  background: #f5f4fa;
+}
+
+
+/* TEXT-ONLY PUBLICATION */
+.publication-text-only {
+  display: block;
+}
+
+.publication-text-only .publication-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.publication-text-only h3 {
+  max-width: 900px;
+  margin: 0 0 16px;
+  font-size: 1.55rem;
+  line-height: 1.3;
+}
+
+.publication-text-only .publication-authors {
+  max-width: 900px;
+  margin: 0 0 14px;
+  color: var(--text);
+}
+
+.publication-text-only .publication-venue {
+  max-width: 900px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.publication-text-only .publication-type {
+  margin: 0;
+}
+
+
+/* RESPONSIVE — TABLET */
+@media (max-width: 980px) {
+  .nav-wrap {
+    align-items: flex-start;
+    padding: 14px 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .split-section,
+  .publication-card,
+  .contact-card,
+  .project-card.featured {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    max-width: 440px;
+    align-items: flex-start;
+  }
+
+  .skill-groups,
+  .award-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card,
+  .project-card.featured {
+    grid-column: span 12;
+  }
+
+  .project-card.featured .project-media {
+    min-height: 280px;
+  }
+}
+
+
+/* RESPONSIVE — MOBILE */
 @media (max-width: 680px) {
+  .hero-grid {
+  grid-template-columns: 1fr;
+}
+
+.hero-visual {
+  max-width: 380px;
+  margin-top: 30px;
+  align-items: center;
+}
   .container {
     width: min(100% - 28px, var(--max));
   }
@@ -933,7 +1089,8 @@ a:hover {
   .skill-groups,
   .award-grid,
   .compact-grid,
-  .figure-grid {
+  .figure-grid,
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 
@@ -955,82 +1112,8 @@ a:hover {
   }
 
   .metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 24px 0;
-}
-
-.metric {
-  padding: 20px;
-  text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-}
-
-.metric strong {
-  display: block;
-  font-size: 2rem;
-  line-height: 1;
-  color: var(--accent-dark);
-}
-
-.metric span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-@media (max-width: 680px) {
-  .metrics-grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.skill-card {
-  padding: 24px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-}
-
-.skill-card h3 {
-  margin: 0 0 10px;
-  font-size: 1rem;
-}
-
-.skill-card p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.award-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-
-.award-card .summa-image {
-  object-fit: contain;
-  object-position: center;
-  background: #f5f4fa;
-}
-
-@media (max-width: 800px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
   .footer-inner {
     flex-direction: column;
